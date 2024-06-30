@@ -52,26 +52,26 @@ search.addEventListener('click' , () => {
 
             switch(json.weather[0].main){
                 case 'Clear':
-                    image.src='/assets/img/clear.png'
+                    image.src='static/assets/img/clear.png'
                 break;
                 case 'Rain':
-                    image.src='/assets/img/rain.png'
+                    image.src='static/assets/img/rain.png'
                 break;
                 case 'Snow':
-                    image.src='/assets/img/snow.png'
+                    image.src='static/assets/img/snow.png'
                 break;
                 case 'Clouds':
-                    image.src='/assets/img/cloud.png'
+                    image.src='static/assets/img/cloud.png'
                 break;
                 case 'Mist':
-                    image.src='/assets/img/mist.png'
+                    image.src='static/assets/img/mist.png'
                 break;
                 case 'Haze':
-                    image.src='/assets/img/mist.png'
+                    image.src='static/assets/img/mist.png'
                 break;
 
                 default:
-                    image.src = '/assets/img/cloud.png';
+                    image.src = 'static/assets/img/cloud.png';
 
             }
 
