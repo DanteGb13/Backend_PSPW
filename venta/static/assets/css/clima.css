@@ -13,7 +13,7 @@ body{
     justify-content: center;
     align-content: center;
     min-height: 100hv;
-    background: url('/assets/img/fonDO_ent.jpg');
+    background: url("https://img.freepik.com/fotos-premium/zapatillas-deportivas-sobre-fondo-madera-vista-superior-espacio-libre-texto_187166-33017.jpg");
     background-size: cover;
     background-position: center;
 }

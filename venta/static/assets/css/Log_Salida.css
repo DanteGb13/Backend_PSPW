@@ -13,7 +13,7 @@
 
 body{
     font-family: var(--font-mono);
-    background-image: url(/assets/img/imgOP.jpg);
+    background-image: url("https://a.storyblok.com/f/178900/960x687/4349c918f6/24ss_puma_one-piece_a3.jpg/m/filters:quality(95)format(webp)");
     background-size: cover;
     background-position: center;
 }
