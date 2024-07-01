@@ -25,3 +25,5 @@ python manage.py migrate
 
 python manage.py createsuperuser -------> creacion de super usuarios 
 PD:
+dante
+123456
