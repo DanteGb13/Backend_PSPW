@@ -3,6 +3,10 @@
 
 {% load crispy_forms_tags %}
 
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
 {% block content %}
     <div class="container bg-dark mt-5 pt-3 pb-3 rounded mb-5">
         <div class="row">
@@ -16,7 +20,7 @@
                             {% endfor %}
                         {% endif %}
                     {{form|crispy}}
-
+                    
                     <button type="submit" class="btn btn-success pl-5 pr-5 mt-4">Login</button>
                 </form>
             </div>                            
