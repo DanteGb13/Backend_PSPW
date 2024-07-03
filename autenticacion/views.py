@@ -35,7 +35,7 @@ class VRegistro(View):
 def close_session(request):
     logout(request)
     
-    return redirect('menu')
+    return redirect('logear')
 def logear(request):
     form = AuthenticationForm()
 

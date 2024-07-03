@@ -4,6 +4,7 @@
 
 {% block title %}
       <title>Principal</title>
+      <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">  
       <link rel="stylesheet" href="{% static 'assets/css/styleMenu.css' %}"> 
   
 {% endblock %}
@@ -101,7 +102,12 @@
         <div id="map">
         </div>    
 
-
+        
+        {% block script %}
         <script src="{% static 'assets/js/index.js' %}"></script>
+
+        {% endblock %}
+
+      
         
 {% endblock %}

@@ -2,11 +2,14 @@
 
 {% load static %}
 
-{% load crispy_forms_tags %}
-
+{% block title %}
 <head>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styleregis.css' %}">
 </head>
+{% endblock %}
+
+{% load crispy_forms_tags %}
 
 {% block content %}
     <div class="container bg-dark mt-5 pt-3 pb-3 rounded mb-5">
