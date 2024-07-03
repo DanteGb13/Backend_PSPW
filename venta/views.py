@@ -13,11 +13,11 @@ def clima(request):
 def contacto(request):
     return render(request, 'contacto.html') 
 
-def login(request):
-    return render(request, 'login.html') 
+def logear(request):
+    return render(request, 'logear.html') 
 
-def signup(request):
-    return render(request, 'signup.html') 
+def Autenticacion(request):
+    return render(request, 'Autenticacion.html') 
 
 def zapatilla(request):
     return render(request, 'zapatilla.html') 
