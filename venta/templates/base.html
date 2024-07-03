@@ -22,7 +22,9 @@
 
 <body>
       <!--Barra de menu --> 
+     
       {% block navbar %}
+      {% if user.is_authenticated %}
       <header class="m-0 border-0 bd-example m-0 border-0" >
         <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
             <div class="container-fluid">
@@ -30,7 +32,7 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarScroll">
+              <div class="collapse navbar-collapse" id="navbarS croll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Menu</a>
@@ -52,23 +54,54 @@
                         <i class="fa-regular fa-envelope"></i> Más
                       </a>
                       <ul class="dropdown-menu">  
-                        
-                        {% if user.is_authenticated %}
-                        
                         <li ></i> Hola {{user.username}} &nbsp;&nbsp; <a href="{% url 'close_session' %}" style="color:white;"> <br> Cerrar sesión</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li>{% else %}<a class="dropdown-item" href="{% url 'logear' %}" >Iniciar sesion</a></li>     
-                        <li><hr class="dropdown-divider"></li>
-                        <li>&nbsp;&nbsp; <a class="dropdown-item" href="{% url 'Autenticacion' %}">Registrarse</a></li>
-                        {% endif %}
+                        
                       </ul>
                     </li>
                 </ul>
               </div>
             </div>
           </nav>
-    </header>     
+    </header>  
+
+    {% else %}
+
+        <header class="m-0 border-0 bd-example m-0 border-0" >
+            <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'logear' %}"><i class="fa-sharp fa-solid fa-cubes fa-xl "></i>  Zapatillas San Antonio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'logear' %}">Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        mas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'logear' %}" >Iniciar sesion</a></li>     
+                            
+                            <li>&nbsp;&nbsp; <a class="dropdown-item" href="{% url 'Autenticacion' %}">Registrarse</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </header>     
+    {% endif %}
+    <!--   menu si no incias  -->   
     {% endblock %}
+
+  
+
+
+    
+
     <!-- fin barra de menu-->
 
     <!--CONTENIDO-->
@@ -81,6 +114,8 @@
 
 
     {% block footer %}
+    {% if user.is_authenticated %}
+    
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">
@@ -136,6 +171,8 @@
               </div>
             </div>
         </footer>
+        {% endif %}
+
     
     {% endblock %}
     
