@@ -93,8 +93,15 @@
                 </div>
           </div>   
         </div>
+         <hr>
+        <h1>Dale un vistazo a nuestros productos</h1>
+        <div class="container">
+          <div class="row" id="zapatillaRow">
+          </div>
+        </div>
         <!-- fin de comprar ahora-->  
         <!-- fin del carrusel-->  
+
         
         <hr>
         <h1>  ESTAMOS UBICADOS EN </h1>
@@ -105,6 +112,7 @@
         
         {% block script %}
         <script src="{% static 'assets/js/index.js' %}"></script>
+        <script type="module" src="{% static 'assets/js/zapatillas.js' %}"></script>
           <!--si lo dejo aqui no me da error-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
         {% endblock %}
