@@ -6,7 +6,7 @@ from CarritoApp.models import Producto
 
 
 def tienda(request):
-    #return HttpResponse("Hola Pythonizando")
+    #return HttpResponse("Hola mundo :D")
     productos = Producto.objects.all()
     return render(request, "tienda.html", {'productos':productos})
 

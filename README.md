@@ -1,39 +1,26 @@
-        # Backend_PSPW intento 5 de backend 
+# Backend_PSPW intento 9 de backend
+
+# para inciar el proyecto es necesario instalar los siguientes
 
 
-        Instalación Entorno Virtual Django
+py -m pip install --upgrade pip
+pip install python-decouple
+pip install django-crispy-forms
+pip install crispy-bootstrap4
+pip install Pillow
 
-        py -m venv myenv  -----> creo el entorno Virtual
+.\myenv\Scripts\activate 
+---------------------------------------
+# codigo:  py -m venv myenv ==> (en caso de que no se active el espacio virtual volver a crearlo)
 
-        .\myenv\Scripts\activate   ---------> ejecuto el entorno Virtual
+ PD: super usario 
+    id: dante
+    contraseña: 123456
 
-        pip install django  ----> instalo Django
 
-        python.exe -m pip install --upgrade pip  ------->Hago un upgrade
+python manage.py runserver ==> correr el server
 
-        django-admin startproject tienda . -------> creo carpetas con py necesarios
+ # Encaso de ser necesario al realizar los upgrades reiniciar el visual, es un bug normal 
+ # Si no ya esta listo para usar 
 
-        ls -----> veo carpetas
-
-        python manage.py startapp zapatos ------> creo la carpeta de otra cosa
-
-        python manage.py runserver
-
-        -------Comandos a considerar--------------
-
-        python manage.py migrate
-        python manage.py makemigrations
-        python manage.py makemigrations CarritoApp
-
-    python manage.py showmigrations
-
-        python manage.py createsuperuser -------> creacion de super usuarios 
-        PD:
-        dante
-        123456
-
-        py -m pip install --upgrade pip
-        pip install python-decouple
-        pip install django-crispy-forms
-        pip install crispy-bootstrap4
-        pip install Pillow
+ 
