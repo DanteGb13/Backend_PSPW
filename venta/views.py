@@ -22,5 +22,5 @@ def Autenticacion(request):
 def zapatilla(request):
     return render(request, 'zapatilla.html') 
 
-def zapatillas(request):
-    return render(request, 'zapatillas.html') 
+def tienda(request):
+    return render(request, 'tienda.html') 

@@ -10,6 +10,6 @@ urlpatterns = [
     path('logear', views.logear, name='logear'),
     path('Autenticacion', views.Autenticacion, name='Autenticacion'),
     path('zapatilla', views.zapatilla, name='zapatilla'),
-    path('zapatillas', views.zapatillas, name='zapatillas'),
+    path('tienda', views.tienda, name='tienda'),
     # otras rutas de la aplicación 'venta'
 ]

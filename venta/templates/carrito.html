@@ -19,7 +19,7 @@
     <div id="productos">
         <div class="producto" data-nombre="Producto 1" data-precio="10" data-stock="10">
             <button class="agregar">Agregar al carrito</button>
-            <a class="btn btn-warning" href="{% url 'zapatillas' %}">Atrás</a> 
+            <a class="btn btn-warning" href="{% url 'tienda' %}">Atrás</a> 
         </div>
     </div>
     <h1>Carrito de Compras</h1>
@@ -28,7 +28,7 @@
         
     {% block script %}
 
-    <script type="module" src="{% static 'assets/js/zapatillas.js' %}"></script>
+    <script type="module" src="{% static 'assets/js/tienda.js' %}"></script>
     <script src="{% static 'assets/js/carrito.js' %}"></script>
 
     {% endblock %}
