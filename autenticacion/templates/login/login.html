@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+
 
 {% load static %}
 
@@ -26,6 +26,7 @@
                     {{form|crispy}}
                     
                     <button type="submit" class="btn btn-success pl-5 pr-5 mt-4">Login</button>
+                    <p> No tienes cuenta?<a  id="inic" href="{% url 'Autenticacion' %}"> Registrate </a></p>
                 </form>
             </div>                            
         </div><!--Fin div row-->

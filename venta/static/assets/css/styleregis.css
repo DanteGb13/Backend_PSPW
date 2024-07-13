@@ -18,6 +18,10 @@ body {
     background-position: center;
 }
 
+#inic{
+    color: black;
+}
+
 .container {
 
     margin-top: 50px; /* Ajusta según tu diseño */
@@ -26,7 +30,6 @@ body {
     
     
 }
-
 
 
 h1 {
