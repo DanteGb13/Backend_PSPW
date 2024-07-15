@@ -45,7 +45,11 @@
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="{% url 'tienda' %}">Comprar</a></li>
                       <li><hr class="dropdown-divider"></li>
+                      {% if user.is_superuser %}
+                      <li><a class="dropdown-item" href="{% url 'vendedor' %}">Vender</a></li>
+                      {% else %}
                       <li><a class="dropdown-item" href="{% url 'contacto' %}">Contacto</a></li>
+                      {% endif %}
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="{% url 'clima' %}">Clima</a></li>
                     </ul>
