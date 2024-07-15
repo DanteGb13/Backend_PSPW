@@ -11,7 +11,7 @@ def clima(request):
     return render(request, 'clima.html') 
 
 def contacto(request):
-    return render(request, 'contacto.html') 
+    return render(request, 'contacto/contacto.html') 
 
 def logear(request):
     return render(request, 'logear.html') 

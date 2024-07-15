@@ -18,15 +18,15 @@
         {% endif %}
 
         <form action="" method="POST" style="text-align:center;">
-            <h2 style="color:white;">Contactanos</h2>
+            <h2 >Contactanos</h2>
             {% csrf_token %}
-            <table style="color:white;margin: 20px auto;">
+            <table >
                 {{miFormulario.as_table}}
             </table>
             <input type="submit" value="Enviar" class="btnEnviarContacto">
         </form>        
 
-        <h1 style="color:white;">{{nombre}}</h1>
+        <h1 >{{nombre}}</h1>
         
     </div>
 {% endblock %}

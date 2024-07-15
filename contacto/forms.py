@@ -1,7 +1,9 @@
-from django import forms
+# En forms.py (puede crear este archivo si no existe)
 
-class FormularioContacto(forms.Form):
-      
-    nombre=forms.CharField(label="Nombre", required=True)
-    email=forms.CharField(label="Email", required=True)
-    contenido=forms.CharField(label="Contenido", widget=forms.Textarea)
+from django import forms
+from .models import MensajeContacto
+
+class FormularioContacto(forms.ModelForm):
+    class Meta:
+        model = MensajeContacto
+        fields = ['nombre', 'mensaje']

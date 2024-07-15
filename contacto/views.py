@@ -1,39 +1,16 @@
-from django.shortcuts import render , redirect
-from django.http import HttpResponse
-from django.conf import settings
+# En views.py
 
+from django.shortcuts import render, redirect
 from .forms import FormularioContacto
+from .models import MensajeContacto
 
-#from django.core.mail import send_mail
-from django.core.mail import EmailMessage
-#from blog.models import Contacto
-
-# Create your views here.
 def contacto(request):
-    
-    formulario_contacto=FormularioContacto()
-    
-    if request.method == "POST":
-        formulario_contacto=FormularioContacto(data=request.POST)
-        if formulario_contacto.is_valid():
-            nombre=request.POST.get("nombre")
-            email=request.POST.get("email")
-            contenido=request.POST.get("contenido")
-            
-            email=EmailMessage("Mensaje desde App Django",
-            "El usuario con nombre {} con la dirección {} escribe lo siguiente:\n\n {}".format(nombre,email,contenido),
-            "",["an.rengifo@duocuc.cl"],reply_to=[email])
-            
-            try:
-                email.send()
-                return redirect("/contacto/?valido")
-            except:
-                return redirect("/contacto/?no-valido")
-                                    
-            recipient_list = ['an.rengifo@duocuc.cl', 'an.rengifo@duocuc.cl']                        
-            send_mail(nombre,contenido,email,recipient_list)                        
-            
-    
-    return render(request,"contacto/contacto.html",{
-        "miFormulario":formulario_contacto,
-    })
+    if request.method == 'POST':
+        formulario = FormularioContacto(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('contacto?valido=True')  # Redirecciona a la misma página con parámetro de éxito
+    else:
+        formulario = FormularioContacto()
+
+    return render(request, 'tu_app/contacto.html', {'miFormulario': formulario})
